@@ -1,0 +1,196 @@
+import PreviewCard from "../shadcn-space/card/card-02";
+
+const products = [
+  {
+    id: 1,
+    name: "MacBook Pro 16-inch",
+    price: 2499.99,
+    description: "Powerful laptop with M3 Max chip for ultimate performance.",
+    category: "Electronics",
+    status: "In Stock",
+    image:
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=80",
+  },
+  {
+    id: 2,
+    name: "Sony WH-1000XM5",
+    price: 398.0,
+    description: "Industry-leading noise canceling wireless headphones.",
+    category: "Electronics",
+    status: "Low Stock",
+    image:
+      "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=500&q=80",
+  },
+  {
+    id: 3,
+    name: "Classic White T-Shirt",
+    price: 25.0,
+    description: "100% cotton classic fit white t-shirt for everyday wear.",
+    category: "Clothing",
+    status: "In Stock",
+    image:
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&q=80",
+  },
+  {
+    id: 4,
+    name: "Levi's 501 Original Jeans",
+    price: 79.5,
+    description: "The original straight fit jeans, a cultural icon.",
+    category: "Clothing",
+    status: "Out of Stock",
+    image:
+      "https://images.unsplash.com/photo-1542272604-78021c3b1eb0?w=500&q=80",
+  },
+  {
+    id: 5,
+    name: "Nike Air Force 1",
+    price: 110.0,
+    description: "Classic streetwear sneakers with comfortable cushioning.",
+    category: "Fashion",
+    status: "In Stock",
+    image:
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&q=80",
+  },
+  {
+    id: 6,
+    name: "Samsung Galaxy S24 Ultra",
+    price: 1299.0,
+    description: "Flagship Android smartphone with advanced AI features.",
+    category: "Electronics",
+    status: "In Stock",
+    image:
+      "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=500&q=80",
+  },
+  {
+    id: 7,
+    name: "Nespresso Vertuo Coffee Maker",
+    price: 199.0,
+    description: "Brews a wide range of coffees at the touch of a button.",
+    category: "Home",
+    status: "Low Stock",
+    image:
+      "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=500&q=80",
+  },
+  {
+    id: 8,
+    name: "Ergonomic Office Chair",
+    price: 245.0,
+    description: "Adjustable mesh chair with lumbar support for long hours.",
+    category: "Furniture",
+    status: "In Stock",
+    image:
+      "https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=500&q=80",
+  },
+  {
+    id: 9,
+    name: "Logitech MX Master 3S",
+    price: 99.99,
+    description: "Advanced wireless mouse with ultra-fast scrolling.",
+    category: "Electronics",
+    status: "Out of Stock",
+    image:
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&q=80",
+  },
+  {
+    id: 10,
+    name: "Keychron K2 Mechanical Keyboard",
+    price: 89.0,
+    description: "Compact wireless mechanical keyboard for Mac and Windows.",
+    category: "Electronics",
+    status: "In Stock",
+    image:
+      "https://images.unsplash.com/photo-1595225476474-87563907a212?w=500&q=80",
+  },
+  {
+    id: 11,
+    name: "The North Face Puffer Jacket",
+    price: 280.0,
+    description: "Water-resistant down jacket for cold weather protection.",
+    category: "Clothing",
+    status: "Low Stock",
+    image:
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&q=80",
+  },
+  {
+    id: 12,
+    name: "Ray-Ban Aviator Sunglasses",
+    price: 160.0,
+    description: "Iconic sunglasses providing 100% UV protection.",
+    category: "Fashion",
+    status: "In Stock",
+    image:
+      "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500&q=80",
+  },
+  {
+    id: 13,
+    name: "Vitamix 5200 Blender",
+    price: 399.95,
+    description: "Professional-grade blender for smoothies and soups.",
+    category: "Home",
+    status: "In Stock",
+    image:
+      "https://images.unsplash.com/photo-1585237432822-4422e69ed23f?w=500&q=80",
+  },
+  {
+    id: 14,
+    name: "Apple Watch Series 9",
+    price: 399.0,
+    description: "Smartwatch with health tracking and double-tap gesture.",
+    category: "Electronics",
+    status: "Low Stock",
+    image:
+      "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=500&q=80",
+  },
+  {
+    id: 15,
+    name: "Fjallraven Kanken Backpack",
+    price: 85.0,
+    description: "Durable everyday backpack with a classic design.",
+    category: "Fashion",
+    status: "In Stock",
+    image:
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&q=80",
+  },
+  {
+    id: 16,
+    name: "Dell UltraSharp 27 Monitor",
+    price: 450.0,
+    description: "4K USB-C monitor with stunning color accuracy.",
+    category: "Electronics",
+    status: "Out of Stock",
+    image:
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&q=80",
+  },
+  {
+    id: 17,
+    name: "Adidas Ultraboost 22",
+    price: 190.0,
+    description:
+      "High-performance running shoes with incredible energy return.",
+    category: "Clothing",
+    status: "In Stock",
+    image:
+      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500&q=80",
+  },
+  {
+    id: 18,
+    name: "Hydro Flask Water Bottle",
+    price: 39.95,
+    description: "Vacuum insulated stainless steel water bottle.",
+    category: "Home",
+    status: "In Stock",
+    image:
+      "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&q=80",
+  },
+];
+const ProductList = () => {
+  return (
+    <div className="container my-5 mx-auto grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {products.map((product) => (
+        <PreviewCard key={product.id} product={product} />
+      ))}
+    </div>
+  );
+};
+
+export default ProductList;

@@ -1,11 +1,11 @@
-import { useState } from "react";
-
-import "./App.css";
+import ProductList from "./components/ui/ProductList";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <div className="text-red-500">Helo React</div>;
+  return (
+    <div className="">
+      <ProductList />
+    </div>
+  );
 }
 
 export default App;
