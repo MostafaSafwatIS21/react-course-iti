@@ -1,10 +1,21 @@
-import ProductList from "./components/ui/ProductList";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { SignupForm } from "./components/signup-form";
 
 function App() {
   return (
-    <div className="">
-      <ProductList />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div>
+              Home Go to <Link to="/register">Register</Link>
+            </div>
+          }
+        />
+        <Route path="/register" element={<SignupForm />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
